@@ -1,0 +1,23 @@
+#HASH {
+  width: 100%;
+}
+
+#HASH div {
+  display: inline-block;
+}
+
+#right {
+  text-align: right;
+}
+
+#left {
+  text-align: left;
+}
+
+.previous {
+  float: left;
+}
+
+.next {
+  float: right;
+}
