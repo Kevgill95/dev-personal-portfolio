@@ -28,7 +28,7 @@ class App extends Component {
         label: 'my other project is listed below'
       },
       about: {
-        title: 'My bio'
+        title: 'About Me'
       },
       contact: {
         title: 'Connect with me!'

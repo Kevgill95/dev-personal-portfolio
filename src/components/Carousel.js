@@ -43,25 +43,25 @@ class Carousel extends React.Component {
     }
 
     handleClick = (id, card) => {
+
       let items = [...this.state.items];
       
       items[id].selected = items[id].selected ? false : true;
 
       items.forEach(item => {
-        if(item.id !== id) {
-          item.selected = false;
-        }
+          if(item.id !== id) {
+            item.selected = false;
+          }
       });
 
       this.setState({ items });
-
     }
 
     createItems = (items) => {
       return items.map(item => {
         return <Card 
         item={item} 
-        onClick={e => this.handleClick(item.id, e)} 
+        click={e => this.handleClick(item.id, e)} 
         key={item.id} 
         />
       })
@@ -70,9 +70,9 @@ class Carousel extends React.Component {
     render() {
       return(
           <Container fluid={true}>
-            <Row className="justify-content-around">
+            <div className="justify-content-around text-center">
               {this.createItems(this.state.items)}
-            </Row>
+            </div>
           </Container>
       );
     }
