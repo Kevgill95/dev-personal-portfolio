@@ -5,8 +5,8 @@ import CardInfo from '../components/CardInfo';
 function Card(props) {
   
   return(
-    <div className="justify-content-center">
-      <img className="" src={props.item.imgSrc} alt={props.item.imgSrc} />
+    <div className="d-inline-block kev-card" onClick={(e) => props.click(props.item)}>
+      <img className="kev-card-image" src={props.item.imgSrc} alt={props.item.imgSrc} />
         { props.item.selected && 
       <CardInfo 
         title={props.item.title} 
