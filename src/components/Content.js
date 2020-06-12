@@ -8,11 +8,11 @@ import '../../src/About.css';
 function Content(props) {
 
     return(
-            <Row className="justify-content-center">
+            // <Row className="justify-content-center">
               <Col>
                 {props.children}
               </Col>
-            </Row>
+            // </Row>
     );
 }
 
