@@ -1,8 +1,8 @@
 import React from 'react';
 
-import github from '../assets/images/github.png';
-import LinkedIn from '../assets/images/LinkedIn-logo.png';
-import KevinGillooly from '../assets/images/KevinGillooly.jpg';
+import rsz_github_logo from '../assets/images/rsz_github_logo.png';
+import rsz_linkedin_logo_service from '../assets/images/rsz_linkedin_logo_service.png';
+import rsz_kev from '../assets/images/rsz_kev.jpg';
 
 import Card from '../components/Card';
 import Container from 'react-bootstrap/Container';
@@ -16,9 +16,9 @@ class Carousel extends React.Component {
             items: [
               {
                 id: 0,
-                title: 'Kevin Gillooly',
-                subTitle: 'Rate, review, different Podcasts',
-                imgSrc: KevinGillooly,
+                title: 'PodcastR app',
+                subTitle: 'Add, Rate, and review different Podcasts!',
+                imgSrc: rsz_kev,
                 link: 'https://podcastr-app.herokuapp.com/',
                 selected: false
               },
@@ -26,7 +26,7 @@ class Carousel extends React.Component {
                 id: 1,
                 title: 'LinkedIn',
                 subTitle: 'Connect with me on LinkedIn!',
-                imgSrc: LinkedIn,
+                imgSrc: rsz_linkedin_logo_service,
                 link: 'https://www.linkedin.com/in/kevingillooly/',
                 selected: false
               },
@@ -34,7 +34,7 @@ class Carousel extends React.Component {
                 id: 2,
                 title: 'Github Profile',
                 subTitle: 'My GitHub',
-                imgSrc: github,
+                imgSrc: rsz_github_logo,
                 link: 'https://github.com/kevgill95',
                 selected: false
               },
@@ -69,11 +69,9 @@ class Carousel extends React.Component {
 
     render() {
       return(
-          <Container fluid={true}>
             <div className="justify-content-around text-center">
               {this.createItems(this.state.items)}
             </div>
-          </Container>
       );
     }
 

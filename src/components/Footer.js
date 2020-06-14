@@ -9,13 +9,8 @@ function Footer() {
   return (
     <footer className="mt-5">
       <div className="border-top justify-content-between p-3">
-          <div className="col-md-6 col-sm-12 float-left text-left">
-            <span>Kevin Gillooly</span>
-          </div>
-          <div className="col-md-6"></div>
-          <div className="col-md-3 col-sm-12 float-right text-right">
-            <span>Site made by Kevin Gillooly</span>
-          </div>
+        <div className="pull-left">Kevin Gillooly</div>
+        <div className="pull-right">Copyright © 2020 - Kevin Gillooly</div>
       </div>
     </footer>
     );

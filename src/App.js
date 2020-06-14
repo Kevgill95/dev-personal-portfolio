@@ -21,6 +21,7 @@ class App extends Component {
         { title: 'Home', path: '/' },
         { title: 'About', path: '/about' },
         { title: 'Contact', path: '/contact' },
+        { title: 'Photos', path: '/photos'}
       ],
       home: {
         title: 'Welcome to my website',
@@ -46,10 +47,11 @@ class App extends Component {
             
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
-              <Nav className="ml-auto">
+            <Nav className="navbar navbar-inverse ml-auto" data-spy="affix" data-offset-top="197">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to="/photos">Photos</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
