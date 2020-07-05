@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3030",
   "dependencies": {
+    "@lawcket/websocket": "^0.1.5",
     "@material/textfield": "^6.0.0",
     "@react-pdf/renderer": "^2.0.0-beta.6",
     "@sendgrid/mail": "^7.2.0",
