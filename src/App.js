@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
+import { Document, Page } from 'react-pdf';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Contact from './pages/Contact';
-
+import Resume from './pages/Resume';
+import Pdf from './documents/Resume.pdf';
+import { fadeIn } from 'react-animations';
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +24,7 @@ class App extends Component {
         { title: 'Home', path: '/' },
         { title: 'About', path: '/about' },
         { title: 'Contact', path: '/contact' },
+        { title: 'Resume', path: '/resume'},
         { title: 'Photos', path: '/photos'}
       ],
       home: {
@@ -37,7 +41,7 @@ class App extends Component {
     }
   }
 
-  render() {
+  render = () => {
     return (
       <Router>
         <Container className="p-0" fluid={true}>
@@ -51,11 +55,11 @@ class App extends Component {
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
-                <Link className="nav-link" to="/photos">Photos</Link>
+                <Link className="nav-link" to='/static/media/Resume.6c134cda.pdf' target='_blank'>Resume</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-
+      
           <Route path='/' exact render={() => <HomePage 
           title={this.state.home.title}
           subTitle={this.state.home.subTitle}
@@ -70,7 +74,10 @@ class App extends Component {
           title={this.state.contact.title}
           />} />
 
-        
+          <Route path='/resume' exact render={() => <a
+            a href='localhost:3000/static/media/Resume.6c134cda.pdf' target="_blank"  />
+          } />
+          
           <Footer />
 
         </Container>

@@ -26,8 +26,8 @@ code {
 
 .kev-card-image-about {
   border-radius: 10px;
-  width: 550px;
-  height: 590px;
+  width: 400px;
+  height: 400px;
   box-shadow: 0px 0px 3px 1px #ccc;
   justify-content: center;
   display: block;
@@ -49,4 +49,10 @@ code {
 .kev-card-subtitle {
   font-size: 16px;
   margin: 0px;
+}
+
+.kev-card-link {
+  font-size: 16px;
+  margin: 0px;
+  color: #007bff
 }
