@@ -17,7 +17,7 @@ class Carousel extends React.Component {
               {
                 id: 0,
                 title: 'PodcastR app',
-                subTitle: 'Add, Rate, and review different Podcasts!',
+                subTitle: 'Add, rate, and review different Podcasts!',
                 imgSrc: rsz_kev,
                 link: 'https://podcastr-app.herokuapp.com/',
                 selected: false
@@ -60,6 +60,7 @@ class Carousel extends React.Component {
     createItems = (items) => {
       return items.map(item => {
         return <Card 
+        className="imgFadeIn1"
         item={item} 
         click={e => this.handleClick(item.id, e)} 
         key={item.id} 

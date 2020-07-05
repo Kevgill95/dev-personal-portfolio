@@ -4,15 +4,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import '../../src/About.css';
+import '../App.css';
 
 function Content(props) {
 
     return(
-            // <Row className="justify-content-center">
-              <Col>
+              <Col className="text textFadeInDown">
                 {props.children}
               </Col>
-            // </Row>
     );
 }
 

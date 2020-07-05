@@ -2,6 +2,7 @@ import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
 import '../index.css';
+import '../App.css';
 
 function CardInfo(props) {
 
@@ -9,9 +10,9 @@ function CardInfo(props) {
 
   return (
     <animated.div className="kev-card-info" style={style}>
-      <p className="kev-card-title">{props.title}</p>
-      <p className="kev-card-subtitle">{props.subTitle}</p>
-      <a href={props.link} target="_blank" rel="noopener noreferrer">View</a>
+      <p className="kev-card-title textFadeInDown2">{props.title}</p>
+      <p className="kev-card-subtitle textFadeInDown2">{props.subTitle}</p>
+      <a className="textFadeInDown2" href={props.link} target="_blank" rel="noopener noreferrer">View</a>
     </animated.div>
   );
 }
