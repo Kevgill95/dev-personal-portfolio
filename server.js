@@ -6,7 +6,7 @@ const publicPath = path.join(__dirname, '.', 'public');
 const port = process.env.PORT || 3030;
 require ('dotenv').config();
 
-const sendGrid = require('@sendGrid/mail');
+const sendGrid = require('@sendgrid/mail');
 const server = express();
 server.use(bodyParser.json());
 
