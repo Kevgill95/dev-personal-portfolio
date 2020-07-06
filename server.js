@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
+const publicPath = path.join(__dirname, '.', 'public');
+const port = process.env.PORT || 3030;
 require ('dotenv').config();
 
 const sendGrid = require('@sendGrid/mail');
@@ -14,6 +17,8 @@ server.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 });
+
+server.use(express.static(publicPath));
 
 server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
@@ -45,4 +50,10 @@ server.post('/api/email', (req, res, next) => {
       })
 });
 
-server.listen(3030, '0.0.0.0');
+server.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, './index.html'));
+});
+
+server.listen(port, () => {
+  console.log(`Server is up on port ${port}!`);
+});
