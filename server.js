@@ -23,8 +23,8 @@ server.get('/api', (req, res, next) => {
 });
 
 const root = require("path").join(__dirname, "../build");
-app.use(express.static(root));
-app.get("*", (req, res) => {
+server.use(express.static(root));
+server.get("*", (req, res) => {
   res.sendFile("index.html", { root });
 });
 
