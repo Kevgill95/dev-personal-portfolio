@@ -2,7 +2,7 @@ import React from 'react';
 
 import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';
-import '../index.css'
+import '../css/index.css';
 
 function HomePage(props) {
 

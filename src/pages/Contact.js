@@ -7,8 +7,8 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
-import '../Contact.css';
-import '../App.css'
+import '../css/contact.css';
+import '../css/app.css';
 
 class Contact extends React.Component {
     constructor(props) {

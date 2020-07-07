@@ -32,12 +32,12 @@
     "typescript": "^3.9.6"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build && cp build/index.html public/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-    "homepage": "https://dev-personal-portfolio.herokuapp.com/",
+    "homepage": "https://kev-personal-portfolio.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },

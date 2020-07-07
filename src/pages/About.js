@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import Content from '../components/Content';
 import Container from 'react-bootstrap/Container';
 
-import '../App.css';
+import '../css/index.css';
 
 function About(props) {
 

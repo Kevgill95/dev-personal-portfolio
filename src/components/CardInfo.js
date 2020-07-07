@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
-import '../index.css';
-import '../App.css';
+import "../css/index.css";
+import "../css/app.css";
 
 function CardInfo(props) {
 

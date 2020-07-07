@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const publicPath = path.resolve(__dirname, '.', 'public');
+const publicPath = path.resolve(__dirname, './public');
 const port = process.env.PORT || 5000;
 require ('dotenv').config();
 
@@ -24,21 +24,21 @@ server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
 
-server.use(express.static(path.join(__dirname, '../public')));
+server.use(express.static(path.join(__dirname, './public')));
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 server.get('*', function (request, response){
-    response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+    response.sendFile(path.resolve(__dirname, './public/index.html'));
 });
 
-if(process.env.NODE_ENV === 'production'){
-  const path = require('path');
-  server.use(express.static('client/build'));
-  server.get('/*', (req,res) => { 
-      res.sendfile(path.resolve(__dirname,'../client','build','index.html')); // change as per your index.html 
-  })
-}
+// if(process.env.NODE_ENV === 'production'){
+//   const path = require('path');
+//   server.use(express.static('client/build'));
+//   server.get('/*', (req,res) => { 
+//       res.sendFile(path.resolve(__dirname, 'build', './public/index.html')); // change as per your index.html 
+//   })
+// }
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
 server.post('/api/email', (req, res, next) => {

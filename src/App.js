@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import './App.css';
-import './index.css';
+import './css/app.css';
+import './css/index.css';
 
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Resume from './pages/Resume';
 
 class App extends Component {
   constructor(props) {

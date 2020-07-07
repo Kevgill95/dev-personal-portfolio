@@ -1,9 +1,6 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 
-import '../../src/About.css';
-import '../App.css';
-
 function Content(props) {
 
     return(
