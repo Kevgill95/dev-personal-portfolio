@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Pdf from '../documents/Resume.pdf';
 
 function Resume(props) {
     return (
       <div>
-        <a href={Pdf} target="_blank">{Pdf}</a>
+        <a href={Pdf} rel="noopener noreferrer" target="_blank">{Pdf}</a>
       </div>
     );
 }

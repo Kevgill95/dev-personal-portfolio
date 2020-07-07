@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
 import './index.css';
 
-import { Document, Page } from 'react-pdf';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import Pdf from './documents/Resume.pdf';
-import { fadeIn } from 'react-animations';
 
 class App extends Component {
   constructor(props) {
@@ -55,7 +52,7 @@ class App extends Component {
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
-                <Link className="nav-link" to='/static/media/Resume.6c134cda.pdf' target='_blank'>Resume</Link>
+                <Link className="nav-link" to='/static/media/Resume.6c134cda.pdf' rel="noopener noreferrer" target='_blank'>Resume</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -74,8 +71,8 @@ class App extends Component {
           title={this.state.contact.title}
           />} />
 
-          <Route path='/resume' exact render={() => <a
-            a href='localhost:3000/static/media/Resume.6c134cda.pdf' target="_blank"  />
+          <Route path='/resume' exact render={() => <a 
+          a href='localhost:3000/static/media/Resume.6c134cda.pdf' rel="noopener noreferrer" target="_blank"></a>
           } />
           
           <Footer />

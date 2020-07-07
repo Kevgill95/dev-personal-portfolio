@@ -2,7 +2,6 @@ import React from 'react';
 
 import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';
-import { Spring } from 'react-spring/renderprops';
 import '../index.css'
 
 function HomePage(props) {

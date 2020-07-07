@@ -24,6 +24,10 @@ server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
 
+server.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, '/index.html'));
+});
+
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
 server.post('/api/email', (req, res, next) => {
   sendGrid.setApiKey(REACT_APP_SENDGRID_API_KEY);
@@ -48,10 +52,6 @@ server.post('/api/email', (req, res, next) => {
             success: false
           })
       })
-});
-
-server.get('*', (req, res) => {
-  res.sendFile(path.join(publicPath, './index.html'));
 });
 
 server.listen(port, () => {

@@ -5,8 +5,7 @@ import rsz_linkedin_logo_service from '../assets/images/rsz_linkedin_logo_servic
 import rsz_kev from '../assets/images/rsz_kev.jpg';
 
 import Card from '../components/Card';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+
 
 class Carousel extends React.Component {
 
