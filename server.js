@@ -24,11 +24,12 @@ server.get('/api', (req, res, next) => {
 
 
 const root = require('path').join(__dirname, './build');
-server.use(express.static(root));
+server.use(express.static('public'));
 server.get("*", (req, res) => {
   res.sendFile("index.html", { root });
 });
 
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).

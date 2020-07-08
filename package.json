@@ -38,7 +38,6 @@
     "eject": "react-scripts eject"
   },
   "homepage": "kev-personal-portfolio.herokuapp.com",
-  "publicPath": "http://localhost:3000/",
   "eslintConfig": {
     "extends": "react-app"
   },
