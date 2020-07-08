@@ -12,6 +12,7 @@ const server = express();
 server.use(bodyParser.json());
 
 server.use(cors());
+
 server.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
@@ -23,9 +24,15 @@ server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
 
-server.use(express.static(path.join(__dirname, '/build/'), {
-  index: 'index.html'
-}));
+server.use(express.static(__dirname));
+
+server.get('*', (req, res) => {
+  if (req.path.endsWith('bundle.js')) {
+      res.sendFile(path.resolve(__dirname, 'bundle.js'));
+  } else {
+      res.sendFile(path.resolve(__dirname, 'index.html'));
+  }
+});
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
 server.post('/api/email', (req, res, next) => {
