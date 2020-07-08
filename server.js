@@ -1,3 +1,6 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 const express = require('express');
 const bodyParser = require('body-parser');
 require("@babel/polyfill");
