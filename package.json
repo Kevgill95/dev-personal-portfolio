@@ -36,13 +36,14 @@
     "react-sticky": "^6.0.3",
     "typescript": "^3.9.6"
   },
-  "homepage": "https://kev-personal-portfolio.herokuapp.com/",
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html public/index.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "gzip build/static/js/*.js && gzip build/static/css/*.css"
   },
+  "homepage": "https://kev-personal-portfolio.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
