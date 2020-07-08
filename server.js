@@ -19,18 +19,11 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use(express.static(path.join(__dirname, 'public')));
+
 server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
-
-
-server.get('*', function (request, response){
-  response.sendFile(`${buildPath}/index.html`)
-});
-
-server.use('/static', express.static(path.join(`${__dirname}, 'public'`)))
-
-
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
 server.post('/api/email', (req, res, next) => {
