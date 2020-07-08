@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const publicPath = path.resolve(__dirname, './public');
 const port = process.env.PORT || 5000;
 require ('dotenv').config();
 
@@ -26,7 +25,7 @@ server.get('/api', (req, res, next) => {
 server.use('/static', express.static(path.join(__dirname, 'public')))
 
 server.get('*', function (request, response){
-    response.sendFile(path.resolve(__dirname, './public/index.html'));
+  response.sendFile(`${__dirname}/${buildPath}/index.html`)
 });
 
 
