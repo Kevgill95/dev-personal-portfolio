@@ -36,9 +36,6 @@
     "react-sticky": "^6.0.3",
     "typescript": "^3.9.6"
   },
-  "resolutions": {
-    "react-dev-utils": "10.0.0"
-  },
   "homepage": "https://kev-personal-portfolio.herokuapp.com/",
   "scripts": {
     "start": "node server.js",
