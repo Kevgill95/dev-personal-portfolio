@@ -2,6 +2,7 @@
   "name": "dev-personal-portfolio",
   "description": "a really cool app",
   "version": "1.0.0",
+  "homepage": "./",
   "engines": {
     "node": "12.x"
   },
@@ -33,6 +34,7 @@
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
     "react-sticky": "^6.0.3",
+    "serve-favicon": "^2.5.0",
     "typescript": "^3.9.6"
   },
   "scripts": {
@@ -42,7 +44,6 @@
     "eject": "react-scripts eject",
     "postbuild": "gzip build/static/js/*.js && gzip build/static/css/*.css"
   },
-  "homepage": "https://kev-personal-portfolio.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
