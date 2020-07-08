@@ -22,15 +22,13 @@ server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
 
-server.use(express.static('public'));
 
 server.use('/static', express.static(path.join(__dirname, 'public')))
 
-// handle every other route with index.html, which will contain
-// a script tag to your application's JavaScript file(s).
 server.get('*', function (request, response){
     response.sendFile(path.resolve(__dirname, './public/index.html'));
 });
+
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
 server.post('/api/email', (req, res, next) => {
