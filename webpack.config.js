@@ -1,7 +1,7 @@
 plugins: [
   new HtmlWebpackPlugin({
     template: './public/index.html',
-    filename: './index.html',
+    filename: './public/index.html',
     favicon: './public/favicon.ico'
   }),
 new HtmlWebpackPlugin(
@@ -29,5 +29,14 @@ new HtmlWebpackPlugin(
       : undefined
   )
 ),
-new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw)
+new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
+
+{
+  use: {
+  loader: 'babel-loader',
+  options: {
+    presets: ['react']
+  }
+},
+}
 ]

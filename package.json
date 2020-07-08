@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3030",
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "@lawcket/websocket": "^0.1.5",
     "@material/textfield": "^6.0.0",
     "@popperjs/core": "^2.4.4",
