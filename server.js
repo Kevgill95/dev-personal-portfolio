@@ -1,14 +1,12 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+require("@babel/polyfill");
+require ('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
-require("@babel/polyfill");
 const cors = require('cors');
 const path = require('path');
 const buildPath = path.resolve(__dirname, 'build');
 const port = process.env.PORT || 5000;
-require ('dotenv').config();
 
 const sendGrid = require('@sendgrid/mail');
 const server = express();
