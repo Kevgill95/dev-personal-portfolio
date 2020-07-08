@@ -3,6 +3,7 @@ import React from 'react';
 import rsz_github_logo from '../assets/images/rsz_github_logo.png';
 import rsz_linkedin_logo_service from '../assets/images/rsz_linkedin_logo_service.png';
 import rsz_kev from '../assets/images/rsz_kev.jpg';
+import '../css/app.css';
 
 import Card from '../components/Card';
 
@@ -59,7 +60,7 @@ class Carousel extends React.Component {
     createItems = (items) => {
       return items.map(item => {
         return <Card 
-        className="imgFadeIn1"
+        className="imgFadeInDown"
         item={item} 
         click={e => this.handleClick(item.id, e)} 
         key={item.id} 

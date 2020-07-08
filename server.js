@@ -29,11 +29,7 @@ server.get("*", (req, res) => {
   res.sendFile("index.html", { root });
 });
 
-var publicDir = __dirname + "/public/";
- server.use(express.static(publicDir));
 
-
-server.use('/static',express.static(path.join(__dirname, './public')));
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 server.get('*', function (request, response){

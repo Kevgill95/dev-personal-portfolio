@@ -83,15 +83,16 @@
   font-family: sans-serif;
   line-height: 30px;
   transform: translateY(-30px);
-  animation: textFadeInDown 1.5s 0ms forwards;
+  animation: textFadeInDown 10ms forwards;
+  animation-duration: 0.5s;
 }
 
   textFadeInDown:nth-child(2) {
-    animation-delay: 1.5s;
+    animation-delay: 0.4s;
   }
   
   textFadeInDown:nth-child(3) {
-    animation-delay: 1.5s;
+    animation-delay: 0.4s;
   }
 
   @keyframes textFadeInDown2 {
@@ -106,12 +107,12 @@
 
   .textFadeInDown2 {
     transform: translateY(-30px);
-    animation: textFadeInDown2 4.5s 0ms forwards;
-    animation-delay: 2000;
+    animation: textFadeInDown2 0.3s 0ms forwards;
+    animation-duration: 1.0s
   }
 
 
-@keyframes imgFadeIn1 {
+@keyframes imgFadeInDown {
   from {
     transform: translateY(-30px);
     opacity: 0;
@@ -121,9 +122,10 @@
   }
 }
 
-.imgFadeIn1 {
+.imgFadeInDown {
   transform: translateY(-30px);
-  animation: imgFadeIn1 3s 0ms forwards;
+  animation: imgFadeInDown 2ms forwards;
+  animation-duration: 0.3s;
 }
 
 @keyframes imgFadeIn2 {
@@ -138,7 +140,7 @@
 
 .imgFadeIn2 {
   transform: translateY(-30px);
-  animation: imgFadeIn2 4s 0ms forwards;
+  animation: imgFadeIn2 0.5s 0ms forwards;
 }
 
 @keyframes imgFadeIn3 {
@@ -153,7 +155,7 @@
 
 .imgFadeIn3 {
   transform: translateY(-30px);
-  animation: imgFadeIn1 5s 0ms forwards;
+  animation: imgFadeIn1 1s 0ms forwards;
 }
 
 @keyframes imgFadeIn4 {
@@ -168,5 +170,5 @@
 
 .imgFadeIn4 {
   transform: translateY(-30px);
-  animation: imgFadeIn1 6s 0ms forwards;
+  animation: imgFadeIn1 1s 0ms forwards;
 }
