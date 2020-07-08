@@ -1,6 +1,10 @@
 {
   "name": "dev-personal-portfolio",
-  "version": "0.1.0",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
   "private": true,
   "proxy": "http://localhost:3030",
   "dependencies": {
@@ -34,9 +38,10 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "react-scripts build && public/index.html",
+    "build": "react-scripts build && cp build/index.html public/index.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "gzip build/static/js/*.js && gzip build/static/css/*.css"
   },
   "eslintConfig": {
     "extends": "react-app"
