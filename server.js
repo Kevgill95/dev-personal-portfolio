@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const buildPath = path.resolve(__dirname, './build');
 const port = process.env.PORT || 5000;
 require ('dotenv').config();
 
