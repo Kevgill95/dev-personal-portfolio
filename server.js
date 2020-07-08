@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+require("@babel/polyfill");
 const cors = require('cors');
 const path = require('path');
-const buildPath = path.resolve(__dirname, './build');
+const buildPath = path.resolve(__dirname, 'build');
 const port = process.env.PORT || 5000;
 require ('dotenv').config();
 
@@ -23,7 +24,7 @@ server.get('/api', (req, res, next) => {
 });
 
 
-server.use('/static', express.static(path.join(__dirname, 'public')))
+server.use('/static', express.static(path.join(`${__dirname}, 'public'`)))
 
 server.get('*', function (request, response){
   response.sendFile(`${__dirname}/${buildPath}/index.html`)
