@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const buildPath = path.resolve(__dirname, 'build');
+const buildPath = path.resolve('./build');
 const port = process.env.PORT || 5000;
 
 const sendGrid = require('@sendgrid/mail');
@@ -24,11 +24,12 @@ server.get('/api', (req, res, next) => {
 });
 
 
+server.get('*', function (request, response){
+  response.sendFile(`${buildPath}/index.html`)
+});
+
 server.use('/static', express.static(path.join(`${__dirname}, 'public'`)))
 
-server.get('*', function (request, response){
-  response.sendFile(`${__dirname}/${buildPath}/index.html`)
-});
 
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
