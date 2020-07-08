@@ -22,12 +22,7 @@ server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
 
-
-const root = require('path').join(__dirname, './build');
 server.use(express.static('public'));
-server.get("*", (req, res) => {
-  res.sendFile("index.html", { root });
-});
 
 server.use('/static', express.static(path.join(__dirname, 'public')))
 
