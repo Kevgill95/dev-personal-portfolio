@@ -24,10 +24,13 @@ server.get('/api', (req, res, next) => {
   res.send('API Status: Running')
 });
 
-server.use(express.static(__dirname));
+
+server.set('port', process.env.PORT || 3000);
+server.use(express.static(path.resolve(__dirname, './public')));
+
 
 server.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve('/Users/kevingillooly/dev-personal-portfolio/public/index.html'));
 });
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`
