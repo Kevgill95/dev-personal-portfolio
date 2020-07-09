@@ -2,7 +2,7 @@
   "name": "dev-personal-portfolio",
   "description": "a really cool app",
   "version": "1.0.0",
-  "homepage": ".",
+  "homepage": "/build",
   "engines": {
     "node": "12.x"
   },
