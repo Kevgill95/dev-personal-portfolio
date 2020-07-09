@@ -36,7 +36,11 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new MomentLocalesPlugin()
+    new MomentLocalesPlugin(),
+    new CopyWebpackPlugin([
+      // relative path is from src
+      { from: './public/images/favicon.ico' }, // <- your path to favicon
+    ])
   ],
   devServer: {
     contentBase: './dist',

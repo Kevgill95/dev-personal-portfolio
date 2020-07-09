@@ -70,23 +70,23 @@ class Contact extends React.Component {
 
           <Content>
             <Form>
-              <Form.Group className="imgFadeIn1">
+              <Form.Group className="textFadeIn1">
                 <Form.Label htmlFor="full-name">Full Name</Form.Label>
                 <Form.Control className="contact-form-text" id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
               </Form.Group>
 
-              <Form.Group className="imgFadeIn2">
+              <Form.Group className="textFadeIn2">
                 <Form.Label htmlFor="subject">Subject</Form.Label>
                 <Form.Control className="contact-form-text" id="email" name="subject" type="subject" value={this.state.subject} onChange={this.handleChange} />
               </Form.Group>
 
 
-              <Form.Group className="imgFadeIn3">
+              <Form.Group className="textFadeIn3">
                 <Form.Label htmlFor="message">Message</Form.Label>
                 <Form.Control id="message" name="message" as="textarea" value={this.state.message} onChange={this.handleChange} />
               </Form.Group>
             
-              <Button onClick={this.handleSubmit} className="d-inline-block imgFadeIn4" variant="primary" type="submit" disabled={this.state.disabled}>
+              <Button onClick={this.handleSubmit} className="d-inline-block textFadeIn4" variant="primary" type="submit" disabled={this.state.disabled}>
                 Send
               </Button>
 

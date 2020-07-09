@@ -8,6 +8,7 @@
   },
   "private": true,
   "proxy": "http://localhost:5000",
+  "secure":false,
   "dependencies": {
     "@lawcket/websocket": "^0.1.5",
     "@material/textfield": "^6.0.0",

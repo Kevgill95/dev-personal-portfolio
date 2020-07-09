@@ -9,9 +9,9 @@ function About(props) {
 
     return (
         <Container md={8} sm={12} className="justify-content-center">
-          <Hero title={props.title} className="kev-card-image-about" src={require('../assets/images/Kevin_Lily.jpg')} />
+          <Hero title={props.title} className="kev-card-image-about" />
 
-          <img className="kev-card-image-about imgFadeIn2" alt="src" src={require('../assets/images/Kevin_Lily.jpg')} />
+          <img className="kev-card-image-about imgFadeIn2" alt="src" src='../assets/images/Kevin_Lily.jpg' />
 
           <Content className="d-flex justify-content-center">
             <p className="textFadeInDown2">Hello, my name is Kevin Gillooly, and I am a software developer with experience in JavaScript, React, Ruby on Rails, React Typescript, PostgreSQL, C#, HTML, and CSS.</p>
