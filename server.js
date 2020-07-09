@@ -27,11 +27,7 @@ server.get('/api', (req, res, next) => {
 server.use(express.static(__dirname));
 
 server.get('*', (req, res) => {
-  if (req.path.endsWith('bundle.js')) {
-      res.sendFile(path.resolve(__dirname, 'bundle.js'));
-  } else {
-      res.sendFile(path.resolve(__dirname, 'index.html'));
-  }
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 const REACT_APP_SENDGRID_API_KEY =`${process.env.REACT_APP_SENDGRID_API_KEY}`

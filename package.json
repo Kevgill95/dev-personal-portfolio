@@ -2,7 +2,7 @@
   "name": "dev-personal-portfolio",
   "description": "a really cool app",
   "version": "1.0.0",
-  "homepage": "/build",
+  "homepage": "https://kev-personal-portfolio.herokuapp.com/",
   "engines": {
     "node": "12.x"
   },
