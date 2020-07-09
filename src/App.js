@@ -71,7 +71,7 @@ class App extends Component {
           />} />
 
           <Route path='/resume' exact render={() => <a 
-          a href='localhost:3000/static/media/Resume.6c134cda.pdf' rel="noopener noreferrer" target="_blank"></a>
+          a href='static/media/Resume.6c134cda.pdf' rel="noopener noreferrer" target="_blank"></a>
           } />
           
           <Footer />

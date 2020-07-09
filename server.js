@@ -26,6 +26,10 @@ server.get('/api', (req, res, next) => {
 
 
 server.set('port', process.env.PORT || 3000);
+
+server.use(express.static('public'))
+server.use('/static', express.static('public'))
+
 server.use(express.static(path.resolve(__dirname, './public')));
 
 
